@@ -1,0 +1,19 @@
+{
+  "name": "tic-tac-toe",
+  "version": "0.0.1",
+  "description": "A tic-tac-toe game. Designed to be a mentored exercise for learning JavaScript farmeworks.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlabsandbox.opr.test.statefarm.org/justin.dragos.m91s/tic-tac-toe.git"
+  },
+  "keywords": [
+    "tic-tac-toe",
+    "tutorial"
+  ],
+  "author": "Justin Dragos",
+  "license": " "
+}
