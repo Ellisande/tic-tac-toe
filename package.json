@@ -15,5 +15,15 @@
     "tutorial"
   ],
   "author": "Justin Dragos",
-  "license": " "
+  "license": " ",
+  "devDependencies": {
+    "gulp": "~3.8.0",
+    "gulp-nodemon": "~1.0.4",
+    "gulp-uglify": "~0.3.0",
+    "gulp-concat": "~2.2.0"
+  },
+  "dependencies": {
+    "express": "~4.4.3",
+    "socket.io": "~1.0.4"
+  }
 }
