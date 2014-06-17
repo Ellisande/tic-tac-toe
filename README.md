@@ -7,7 +7,7 @@
 * Text Editor: Brackets and Atom both work well for this kind of development
  * Brackets (Windows/Mac): https://olex-secure.openlogic.com/packages/corporate/brackets
  * Atom (Mac Only): https://olex-secure.openlogic.com/packages/github_atom
-* Node JS/NPM (Packaged together): {{olex link}}
+* Node JS/NPM (Packaged together): https://olex-secure.openlogic.com/packages/node-js
 * Selenium Server (Optional for testing): https://olex-secure.openlogic.com/packages/selenium-rc
 
 ## Workstation Setup
