@@ -22,6 +22,8 @@
 * Install global dependencies:
  * ```npm install –g gulp```
  * ```npm install -g nightwatch```
+ * Mac Note: Mac users will need to run the global dependency installs with `sudo`
+* Move to the project directory ```cd tic-tac-toe```
 * Install dependencies: ```npm install```
 * Run the app: ```gulp```
 * Open the app: http://localhost:3000
