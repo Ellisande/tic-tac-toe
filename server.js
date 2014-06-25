@@ -31,5 +31,7 @@ var board = {
 var io = require('socket.io')(server);
 
 io.on('connection', function(socket){
-
+  socket.emit('board:update', {
+    board: board
+  });
 });
