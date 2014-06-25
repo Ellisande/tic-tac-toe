@@ -1,5 +1,5 @@
-angular.module('services', []).factory('socket', function($rootScope){
-    var socket = io.connect('http://localhost:3000');
+angular.module('services', []).factory('socket', function($rootScope, $location){
+    var socket = io.connect('http://'+$location.host()+':3000');
 
     var registeredOn = function (eventName, callback) {
       var proxyFunction = function () {
