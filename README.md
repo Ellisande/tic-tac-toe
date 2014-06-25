@@ -27,3 +27,11 @@
 * Install dependencies: ```npm install```
 * Run the app: ```gulp```
 * Open the app: http://localhost:3000
+
+## Framework Documentation
+
+* Angular JS: https://angularjs.org/
+* SocketIO: http://socket.io
+* Gulp JS: http://gulpjs.com
+* Node JS: http://nodejs.org
+* Express JS: http://expressjs.com
