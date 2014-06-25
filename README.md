@@ -19,7 +19,7 @@
  * __DO NOT JUST COPY AND PASTE THE BELOW__
  * Replace "alias" with your alias and "proxyPassword" with your proxy (SFNet) password
  * Set your proxy credentials for NPM: ```npm set proxy http://alias:proxyPassword@in00pxy1.opr.statefarm.org:8000```
-* Install global dependencies:
+* Install global dependencies: __DO NOT COPY AND PASTE THESE COMMANDS__ there is an issue with the '-' character when copy and pasting
  * ```npm install –g gulp```
  * ```npm install -g nightwatch```
  * Mac Note: Mac users will need to run the global dependency installs with `sudo`
