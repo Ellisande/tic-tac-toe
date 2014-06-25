@@ -22,4 +22,4 @@
  * ```npm install -g nightwatch```
 * Install dependencies: ```npm install```
 * Run the app: ```gulp```
-* Open the app: http://localhost:5000
+* Open the app: http://localhost:3000
