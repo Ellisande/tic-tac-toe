@@ -9,7 +9,7 @@ var csslint = require('gulp-csslint');
 gulp.task('js-minify', function(){
     return gulp.src('client/js/**/*.js')
         .pipe(concat('app.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('build'));
 });
 
@@ -48,8 +48,8 @@ gulp.task('lint', ['js-lint', 'css-lint']);
 gulp.task('minify', ['css-minify','js-minify']);
 
 gulp.task('watch', function(){
-    gulp.watch('app/js/**/*.js', ['js-minify', 'js-lint']);
-    gulp.watch('app/css/**/*.css', ['css-minify', 'css-lint' ]);
+    gulp.watch('client/js/**/*.js', ['js-minify', 'js-lint']);
+    gulp.watch('client/css/**/*.css', ['css-minify', 'css-lint' ]);
 });
 
 gulp.task('default', ['node','minify', 'lint','watch']);
