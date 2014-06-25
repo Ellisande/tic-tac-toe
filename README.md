@@ -12,6 +12,8 @@
 
 ## Workstation Setup
 
+* Due to GitLab internal weirdness, set your SSL verify to false
+  * ```git config --global http.sslVerify false```
 * Clone the repo: ```git clone https://gitlabsandbox.opr.test.statefarm.org/justin.dragos.m91s/tic-tac-toe.git```
 * Setup npm:
  * __DO NOT JUST COPY AND PASTE THE BELOW__
