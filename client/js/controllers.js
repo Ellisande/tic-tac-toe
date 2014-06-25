@@ -46,7 +46,6 @@ function HomeCtrl($scope, socket){
   }
 
   var getWinner = function(markerSet){
-    console.log(markerSet);
     if(markerSet[0] == markerSet[1] && markerSet[1] == markerSet[2] && markerSet[2] == 'X') {
       return 'X';
     }
