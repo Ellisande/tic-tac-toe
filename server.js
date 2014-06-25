@@ -18,14 +18,6 @@ var board = {
   '3-1': '_',
   '3-2': '_',
   '3-3': '_',
-  winner: null,
-  changeMark: function(row, column){
-    var coordinate = row+'-'+column;
-    var currentMark = this[coordinate];
-    if(currentMark == 'X') this[coordinate] = 'O';
-    if(currentMark == 'O') this[coordinate] = '_';
-    if(currentMark == '_') this[coordinate] = 'X';
-  }
 };
 
 var io = require('socket.io')(server);
@@ -33,5 +25,12 @@ var io = require('socket.io')(server);
 io.on('connection', function(socket){
   socket.emit('board:update', {
     board: board
+  });
+
+  socket.on('board:update', function(data){
+    board = data.board;
+    io.emit('board:update', {
+      board: board
+    });
   });
 });
