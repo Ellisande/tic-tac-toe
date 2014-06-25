@@ -18,6 +18,22 @@ gulp.task('css-minify', function(){
         .pipe(gulp.dest('build'));
 });
 
+gulp.task('js-lint', function(){
+    return gulp.src('client/js/**/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'));
+});
+
+gulp.task('css-lint', function(){
+    return gulp.src('client/css/**/*.css')
+        .pipe(csslint())
+        .pipe(csslint.reporter('default'));
+});
+
+gulp.task('lint', ['js-lint', 'css-lint']);
+
+gulp.task('minify', ['css-minify','js-concat']);
+
 gulp.task('node', function(){
   nodemon({
       script: 'server.js',
@@ -29,4 +45,4 @@ gulp.task('node', function(){
     });
 });
 
-gulp.task('default', ['node', 'js-concat', 'css-minify']);
+gulp.task('default', ['node', 'lint', 'minify']);
