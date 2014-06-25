@@ -1,4 +1,4 @@
-angular.module('services', []).factory('socket', function(){
+angular.module('services', []).factory('socket', function($rootScope){
     var socket = io.connect('http://localhost:3000');
 
     var registeredOn = function (eventName, callback) {
