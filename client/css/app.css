@@ -15,13 +15,11 @@
 }
 
 .row div {
-  display: inline;
-  text-align: center;
   padding: 5px;
+  text-align: center;
 }
 
 .row {
   font-size: 5em;
   padding: 5px;
-  text-align: center;
 }
