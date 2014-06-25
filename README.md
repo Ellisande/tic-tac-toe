@@ -13,6 +13,10 @@
 ## Workstation Setup
 
 * Clone the repo: ```git clone https://gitlabsandbox.opr.test.statefarm.org/justin.dragos.m91s/tic-tac-toe.git```
+* Setup npm:
+ * __DO NOT JUST COPY AND PASTE THE BELOW__
+ * Replace "alias" with your alias and "proxyPassword" with your proxy (SFNet) password
+ * Set your proxy credentials for NPM: ```npm set proxy http://alias:proxyPassword@in00pxy1.opr.statefarm.org:8000```
 * Install global dependencies:
  * ```npm install –g gulp```
  * ```npm install -g nightwatch```
