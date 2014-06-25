@@ -5,31 +5,6 @@ var minify = require('gulp-minify-css');
 var jshint = require('gulp-jshint');
 var csslint = require('gulp-csslint');
 
-gulp.task('js-minify', function(){
-    return gulp.src('client/js/**/*.js')
-        .pipe(concat('app.js'))
-        .pipe(gulp.dest('build'));
-});
-
-gulp.task('js-lint', function(){
-    return gulp.src('client/js/**/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
-});
-
-gulp.task('css-minify', function(){
-    return gulp.src(['client/css/**/*.css'])
-        .pipe(concat('app.css'))
-        .pipe(minify())
-        .pipe(gulp.dest('build'));
-});
-
-gulp.task('css-lint', function(){
-    return gulp.src('client/css/**/*.css')
-        .pipe(csslint())
-        .pipe(csslint.reporter('default'));
-});
-
 gulp.task('node', function(){
   nodemon({
       script: 'server.js',
@@ -41,13 +16,4 @@ gulp.task('node', function(){
     });
 });
 
-gulp.task('lint', ['js-lint', 'css-lint']);
-
-gulp.task('minify', ['css-minify','js-minify']);
-
-gulp.task('watch', function(){
-    gulp.watch('client/js/**/*.js', ['js-minify', 'js-lint']);
-    gulp.watch('client/css/**/*.css', ['css-minify', 'css-lint' ]);
-});
-
-gulp.task('default', ['node','minify', 'lint','watch']);
+gulp.task('default', ['node']);
