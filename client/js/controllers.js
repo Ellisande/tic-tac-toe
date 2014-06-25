@@ -13,10 +13,14 @@ function HomeCtrl($scope, socket){
       var coordinate = row+'-'+column;
       var currentMark = this[coordinate];
       if(currentMark == 'X') this[coordinate] = 'O';
-      if(currentMark == 'O') this[coordinate] = '?';
-      if(currentMark == '?') this[coordinate] = 'X';
+      if(currentMark == 'O') this[coordinate] = '_';
+      if(currentMark == '_') this[coordinate] = 'X';
     }
   };
 
   $scope.board = board;
+
+  $scope.changeMarker = function(row, column){
+    board.changeMark(row, column);
+  };
 }

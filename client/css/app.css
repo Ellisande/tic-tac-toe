@@ -17,6 +17,7 @@
 .row div {
   padding: 5px;
   text-align: center;
+  cursor: pointer;
 }
 
 .row {
