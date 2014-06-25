@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
-var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify-css');
 var jshint = require('gulp-jshint');
@@ -9,7 +8,6 @@ var csslint = require('gulp-csslint');
 gulp.task('js-minify', function(){
     return gulp.src('client/js/**/*.js')
         .pipe(concat('app.js'))
-        // .pipe(uglify())
         .pipe(gulp.dest('build'));
 });
 
