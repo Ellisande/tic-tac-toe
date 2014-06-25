@@ -21,7 +21,7 @@ gulp.task('js-lint', function(){
 
 gulp.task('css-minify', function(){
     return gulp.src(['client/css/**/*.css'])
-        .pipe(concat('client.css'))
+        .pipe(concat('app.css'))
         .pipe(minify())
         .pipe(gulp.dest('build'));
 });
