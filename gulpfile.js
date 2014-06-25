@@ -45,4 +45,9 @@ gulp.task('node', function(){
     });
 });
 
-gulp.task('default', ['node', 'lint', 'minify']);
+gulp.task('watch', function(){
+    gulp.watch('client/js/**/*.js', ['js-concat', 'js-lint']);
+    gulp.watch('client/css/**/*.css', ['css-minify', 'css-lint' ]);
+});
+
+gulp.task('default', ['node', 'lint', 'minify', 'watch']);
