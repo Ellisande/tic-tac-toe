@@ -34,6 +34,11 @@ gulp.task('lint', ['js-lint', 'css-lint']);
 
 gulp.task('minify', ['css-minify','js-concat']);
 
+gulp.task('watch', function(){
+    gulp.watch('client/js/**/*.js', ['js-concat', 'js-lint']);
+    gulp.watch('client/css/**/*.css', ['css-minify', 'css-lint' ]);
+});
+
 gulp.task('node', function(){
   nodemon({
       script: 'server.js',
@@ -45,4 +50,4 @@ gulp.task('node', function(){
     });
 });
 
-gulp.task('default', ['node', 'lint', 'minify']);
+gulp.task('default', ['node', 'lint', 'minify', 'watch']);
