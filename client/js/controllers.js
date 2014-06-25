@@ -9,6 +9,7 @@ function HomeCtrl($scope, socket){
     '3-1': 'O',
     '3-2': 'X',
     '3-3': '_',
+    winner: null,
     changeMark: function(row, column){
       var coordinate = row+'-'+column;
       var currentMark = this[coordinate];
@@ -34,15 +35,56 @@ function HomeCtrl($scope, socket){
   board.getColumns = function(){
     var column1 = [ this['1-1'], this['2-1'], this['3-1'] ];
     var column2 = [ this['1-2'], this['2-2'], this['3-2'] ];
-    var column1 = [ this['1-3'], this['2-3'], this['3-3'] ];
+    var column3 = [ this['1-3'], this['2-3'], this['3-3'] ];
     return [column1, column2, column3];
   }
 
   board.getDiagonals = function(){
-    return diagonal1 = [ this['1-1'], this['2-2'], this['3-3'] ];
-    return diagonal2 = [ this['1-3'], this['2-2'], this['3-1'] ];
+    var diagonal1 = [ this['1-1'], this['2-2'], this['3-3'] ];
+    var diagonal2 = [ this['1-3'], this['2-2'], this['3-1'] ];
     return [diagonal1, diagonal2];
   }
 
+  var getWinner = function(markerSet){
+    console.log(markerSet);
+    if(markerSet[0] == markerSet[1] && markerSet[1] == markerSet[2] && markerSet[2] == 'X') {
+      return 'X';
+    }
+    if(markerSet[0] == markerSet[1] && markerSet[1] == markerSet[2] && markerSet[2] == 'O') {
+      return 'O';
+    }
+    return null;
+  };
 
+
+  $scope.$watch('board', function(){
+    var rows = board.getRows();
+    var rowWinner = rows.some(function(row){
+      var winner = getWinner(row);
+      if(winner){
+        board.winner = winner;
+        return true;
+      }
+    });
+
+    var columns = board.getColumns();
+    var columnWinner = columns.some(function(column){
+      var winner = getWinner(column);
+      if(winner){
+        board.winner = winner;
+        return true;
+      }
+    });
+
+    var diagonals = board.getDiagonals();
+    var diagonalWinner = diagonals.some(function(diagonal){
+      var winner = getWinner(diagonal);
+      if(winner){
+        board.winner = winner;
+        return true;
+      }
+    });
+
+    if(!rowWinner && !columnWinner && !diagonalWinner) board.winner = null;
+  }, true);
 }
