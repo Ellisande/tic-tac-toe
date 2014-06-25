@@ -32,8 +32,12 @@ function HomeCtrl($scope, socket){
 
     $scope.board = board;
   });
+
   $scope.changeMarker = function(row, column){
     $scope.board.changeMark(row, column);
+    socket.emit('board:update', {
+      board: $scope.board
+    });
   };
 
 
@@ -49,6 +53,7 @@ function HomeCtrl($scope, socket){
 
 
   $scope.$watch('board', function(){
+    if(!$scope.board) return;
     var rows = $scope.board.getRows();
     var rowWinner = rows.some(function(row){
       var winner = getWinner(row);
