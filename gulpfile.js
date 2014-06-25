@@ -29,4 +29,4 @@ gulp.task('node', function(){
     });
 });
 
-gulp.task('default', ['node']);
+gulp.task('default', ['node', 'js-concat', 'css-minify']);
