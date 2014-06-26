@@ -12,6 +12,7 @@ We want to do some standard build tasks with our Gulp project. Lets aggregate ou
 
 * Create a task to aggregate the JavaScript files (maybe call it js-concat)
 * Create a task to minify and aggregate the CSS (maybe call it cs-minify)
+* Ensure that the built versions of the files are named 'app.js' and 'app.css'. Have them output to the 'build' directory.
 
 ### 1.2 Create Your Reporting Tasks
 
