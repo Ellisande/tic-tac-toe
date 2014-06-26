@@ -98,3 +98,9 @@ Now its time to modify the changeMark method to interact with the server.
 ## 4 - Test (Optional)
 
 Now we have a multiplayer tic-tac-toe game! Yeay! But does it really work? Lets find out!
+
+Ensure you have both Nightwatch and the selenium standalone JAR available. See README.md if you need help getting those dependencies.
+
+### 4.1 Configure Nightwatch
+
+* 
