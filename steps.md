@@ -129,3 +129,12 @@ Now that you've made your first test, its time to step up your game. Create a te
 ## 5 Go Outside
 
 ... and get some air! You've completed a whole app in all javascript. You are the champion, my friend. Congrulations!
+
+### 5.1 Still Here?
+
+If you are still working on this, here are some ideas on what you could do next.
+
+* Create "rooms" that people can join to play tic-tac-toe one-on-one
+* Allow the user to select if they are X's or O's
+* Write computer AI to play against the player
+* Create a speed game where people can change any box they want and have to try and keep up with the other player to win
