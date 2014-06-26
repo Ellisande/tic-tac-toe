@@ -29,9 +29,15 @@ The last step is to make this bad boy stream.
 * Create a gulp.watch function to watch the css files and run css-lint and css-minify
 * Add 'watch' to the default task
 
+You should now see gulp minify, concat, and lint your files immediately on save.
+
 ## 2 - Angular Front End
 
 A basic angular application is already setup for you. Now we need to tailor it to our needs.
+
+Examples and documentation about Angular can be found at: http://angularjs.org
+
+Note: The application is expecting the your files to be built and put in the "build" directory to run. If you have not set this up correctly with gulp you will not see anything when you attempt to load the application.
 
 ### 2.1 Create a Data Structure
 
@@ -50,7 +56,7 @@ Now that we have the data structure created we can use Angular to bind the data.
 
 Thats it, do you see your X's and O's?
 
-### 2.3 Bind a Click Events
+### 2.3 Bind Click Events
 
 Alright, so you've got the data bound, maybe there is a cool way to make them change on click? There isn't yet, but there sure will be!
 
@@ -140,3 +146,4 @@ If you are still working on this, here are some ideas on what you could do next.
 * Allow the user to select if they are X's or O's
 * Write computer AI to play against the player
 * Create a speed game where people can change any box they want and have to try and keep up with the other player to win
+* Create tests for every possible combination of moves
