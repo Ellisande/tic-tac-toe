@@ -2,35 +2,35 @@
   <div id="grid-11" class="right grid-33" ng-click="changeMarker(1, 1)">
     {{board['1-1']}}
   </div>
-  <div class="right grid-33" ng-click="changeMarker(1, 2)">
+  <div id="grid-12" class="right grid-33" ng-click="changeMarker(1, 2)">
     {{board['1-2']}}
   </div>
-  <div class="grid -33" ng-click="changeMarker(1, 3)">
+  <div id="grid-13" class="grid -33" ng-click="changeMarker(1, 3)">
     {{board['1-3']}}
   </div>
 </div>
 <div class="row grid-100">
-  <div class="top right grid-33" ng-click="changeMarker(2, 1)">
+  <div id="grid-21" class="top right grid-33" ng-click="changeMarker(2, 1)">
     {{board['2-1']}}
   </div>
-  <div class="top right grid-33" ng-click="changeMarker(2, 2)">
+  <div id="grid-22" class="top right grid-33" ng-click="changeMarker(2, 2)">
     {{board['2-2']}}
   </div>
-  <div class="top grid-33" ng-click="changeMarker(2, 3)">
+  <div id="grid-23" class="top grid-33" ng-click="changeMarker(2, 3)">
     {{board['2-3']}}
   </div>
 </div>
 <div class="row grid-100">
-  <div class="top right grid-33" ng-click="changeMarker(3, 1)">
+  <div id="grid-31" class="top right grid-33" ng-click="changeMarker(3, 1)">
     {{board['3-1']}}
   </div>
-  <div class="right top grid-33" ng-click="changeMarker(3, 2)">
+  <div id="grid-32" class="right top grid-33" ng-click="changeMarker(3, 2)">
     {{board['3-2']}}
   </div>
-  <div class="top grid-33" ng-click="changeMarker(3, 3)">
+  <div id="grid-33" class="top grid-33" ng-click="changeMarker(3, 3)">
     {{board['3-3']}}
   </div>
 </div>
-<div class="row grid-100" ng-show="board.winner">
+<div id="winning" class="row grid-100" ng-show="board.winner">
   The winner is.... {{board.winner}}
 </div>
