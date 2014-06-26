@@ -117,3 +117,11 @@ Let's right our first test! How about we make sure that clicking on the marks ch
 * Create a file called markChanges.js inside that directory
 * Once you have a simple way to select your grid squares create a simple test that clicks on them
 * Instructions for making a simple test can be found at http://nightwatchjs.org/guide#usage
+
+### 4.3 Create a test for Winning
+
+Now that you've made your first test, its time to step up your game. Create a test that asserts the winning functionality works.
+
+* You may want to an easy way to select the winning div
+* Create a test that changes an entire row, column, and/or diagonals to X and/or O
+* Assert that the correct winning message shows up
