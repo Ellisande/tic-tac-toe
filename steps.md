@@ -103,4 +103,17 @@ Ensure you have both Nightwatch and the selenium standalone JAR available. See R
 
 ### 4.1 Configure Nightwatch
 
-* 
+We need to configure nightwatch to run our tests. Nightwatchjs.org has information on how to do this, but feel free just to steal the one provided for quick startiness.
+
+* Create a nightwatch.json file in the main directory: https://gitlabsandbox.opr.test.statefarm.org/justin.dragos.m91s/tic-tac-toe/blob/master/nightwatch.json
+* Create a nightwatch.js file in the main directory:https://gitlabsandbox.opr.test.statefarm.org/justin.dragos.m91s/tic-tac-toe/blob/master/nightwatch.js
+
+### 4.2 Create a Test for Clicky Marks
+
+Let's right our first test! How about we make sure that clicking on the marks changes them? I'm glad you agree, because you don't have a choice!
+
+* You may want to add an easy way to select individual cells (e.g. an id or a class)
+* Create a test directory in the main directory
+* Create a file called markChanges.js inside that directory
+* Once you have a simple way to select your grid squares create a simple test that clicks on them
+* Instructions for making a simple test can be found at http://nightwatchjs.org/guide#usage
