@@ -28,7 +28,7 @@
 * Run the app: ```gulp```
 * Open the app: http://localhost:3000
 
-## How to Navigate the Example
+## How to Navigate the Repository
 
 The application is set up in a number of steps for each new thing to add. You can move forward or backward whenever you like. All the steps can be referenced from the steps.md file: https://gitlabsandbox.opr.test.statefarm.org/justin.dragos.m91s/tic-tac-toe/blob/master/steps.md
 

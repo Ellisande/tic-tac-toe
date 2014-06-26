@@ -4,6 +4,8 @@
 
 Gulp is going to be used for the CI solution. Gulp is designed with streaming CI in mind, so that's what we're going to set up.
 
+You can find examples of how to set things up at the Gulp website: http://gulpjs.com
+
 ### 1.1 Create Your Build Tasks
 
 We want to do some standard build tasks with our Gulp project. Lets aggregate our JavaScript files, minify our CSS files, and concatenate them together into a single file.
