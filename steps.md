@@ -125,3 +125,7 @@ Now that you've made your first test, its time to step up your game. Create a te
 * You may want to an easy way to select the winning div
 * Create a test that changes an entire row, column, and/or diagonals to X and/or O
 * Assert that the correct winning message shows up
+
+## 5 Go Outside
+
+... and get some air! You've completed a whole app in all javascript. You are the champion, my friend. Congrulations!
