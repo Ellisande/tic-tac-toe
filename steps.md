@@ -94,6 +94,8 @@ We'll do this the cheap and easy way by simply declaring the board as a global v
 
 So now we have the board object on the server, how will it get to the UI? Socket magic!
 
+Socket usage examples can be found at http://socket.io
+
 * Create a socket.emit event that sends the event "board:update" with the board as data
 * Create a socket.on('board:update') event on the client that sets $scope.board to the data in the event
 
@@ -109,6 +111,8 @@ Now its time to modify the changeMark method to interact with the server.
 Now we have a multiplayer tic-tac-toe game! Yeay! But does it really work? Lets find out!
 
 Ensure you have both Nightwatch and the selenium standalone JAR available. See README.md if you need help getting those dependencies.
+
+Nightwatch usage examples can be found at http://nightwatchjs.org/
 
 ### 4.1 Configure Nightwatch
 
