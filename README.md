@@ -24,7 +24,7 @@
 
 ## How to Navigate the Repository
 
-The application is set up in a number of steps for each new thing to add. You can move forward or backward whenever you like. All the steps can be referenced from the steps.md file: https://github.com/Ellisande/tic-tac-toe/steps.md
+The application is set up in a number of steps for each new thing to add. You can move forward or backward whenever you like. All the steps can be referenced from the steps.md file: https://github.com/Ellisande/tic-tac-toe/blob/master/steps.md
 
 * Start from the beginning: ```git reset --hard start```
 * Move to a specific step: ```git reset --hard 1.2```
