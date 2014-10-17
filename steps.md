@@ -14,6 +14,16 @@ We want to do some standard build tasks with our Gulp project. Lets aggregate ou
 * Create a task to minify and aggregate the CSS (maybe call it cs-minify)
 * Ensure that the built versions of the files are named 'app.js' and 'app.css'. Have them output to the 'build' directory.
 
+Here's an example of a task that would minify your .css files:
+```
+gulp.task('css-minify', function(){
+    return gulp.src(['client/css/**/*.css'])
+        .pipe(concat('app.css'))
+        .pipe(minify())
+        .pipe(gulp.dest('build'));
+});
+```
+
 ### 1.2 Create Your Reporting Tasks
 
 We need some static analysis to make sure our code is in good shape.
@@ -32,6 +42,11 @@ The last step is to make this bad boy stream.
 
 You should now see gulp minify, concat, and lint your files immediately on save.
 
+Here's an example line that might go inside your watch task:
+```
+gulp.watch('client/js/**/*.js', ['js-concat', 'js-lint']);
+```
+
 ## 2 - Angular Front End
 
 A basic angular application is already setup for you. Now we need to tailor it to our needs.
@@ -48,6 +63,21 @@ We will need a JavaScript data structure to hold the tic-tac-toe board. There ar
 * Create a method that allows you to cycle through X, O and blank for each board coordinate
 * Add some X's and O's so we can see the binding's in the next step
 * In HomeCtrl add the new board object to the $scope variable as $scope.board
+
+Yours might be different, but my board object ended up looking something like this:
+```
+var board = {
+  '1-1': '_',
+  '1-2': '_',
+  '1-3': '_',
+  '2-1': '_',
+  '2-2': '_',
+  '2-3': '_',
+  '3-1': '_',
+  '3-2': '_',
+  '3-3': '_',
+};
+```
 
 ### 2.2 Bind the Data
 
@@ -98,6 +128,22 @@ Socket usage examples can be found at http://socket.io
 
 * Create a socket.emit event that sends the event "board:update" with the board as data
 * Create a socket.on('board:update') event on the client that sets $scope.board to the data in the event
+
+The events might look something like these ones:
+
+emit:
+```
+  socket.emit('board:update', {
+    board: board
+  });
+```
+
+on:
+```
+  socket.on('board:update', function(data){
+    $scope.board = data.board;
+  });
+```
 
 ### 3.3. Change the Change
 
