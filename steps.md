@@ -118,8 +118,8 @@ Nightwatch usage examples can be found at http://nightwatchjs.org/
 
 We need to configure nightwatch to run our tests. Nightwatchjs.org has information on how to do this, but feel free just to steal the one provided for quick startiness.
 
-* Create a nightwatch.json file in the main directory: https://gitlabsandbox.opr.test.statefarm.org/justin.dragos.m91s/tic-tac-toe/blob/master/nightwatch.json
-* Create a nightwatch.js file in the main directory:https://gitlabsandbox.opr.test.statefarm.org/justin.dragos.m91s/tic-tac-toe/blob/master/nightwatch.js
+* Create a nightwatch.json file in the main directory: https://github.com/Ellisande/tic-tac-toe/blob/master/nightwatch.json
+* Create a nightwatch.js file in the main directory:https://github.com/Ellisande/tic-tac-toe/blob/master/nightwatch.js
 
 ### 4.2 Create a Test for Clicky Marks
 
@@ -141,7 +141,7 @@ Now that you've made your first test, its time to step up your game. Create a te
 
 ## 5 Go Outside
 
-... and get some air! You've completed a whole app in all javascript. You are the champion, my friend. Congrulations!
+... and get some air! You've completed a whole app in all javascript. You are the champion, my friend. Congratulations!
 
 ### 5.1 Still Here?
 
