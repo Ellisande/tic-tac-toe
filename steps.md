@@ -177,6 +177,25 @@ Let's right our first test! How about we make sure that clicking on the marks ch
 * Once you have a simple way to select your grid squares create a simple test that clicks on them
 * Instructions for making a simple test can be found at http://nightwatchjs.org/guide#usage
 
+My clicky test looked like this:
+```
+module.exports = {
+  "Clicking on a blank mark changes it to X": function(browser){
+    browser
+      .url('http://localhost:3000')
+      .waitForElementVisible('body', 1000)
+      .assert.containsText('#grid-11', '_')
+      .click('#grid-11')
+      .assert.containsText('#grid-11', 'X')
+      .click('#grid-11')
+      .assert.containsText('#grid-11', 'O')
+      .click('#grid-11')
+      .assert.containsText('#grid-11', '_')
+      .end();
+  }
+};
+```
+
 ### 4.3 Create a test for Winning
 
 Now that you've made your first test, its time to step up your game. Create a test that asserts the winning functionality works.
